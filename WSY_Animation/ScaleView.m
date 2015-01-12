@@ -42,6 +42,7 @@
 {
     POPBasicAnimation *baseAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     baseAnimation.duration = 1.0;
+    baseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     baseAnimation.beginTime = delyedTime + CACurrentMediaTime();
     baseAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0, 0)];
     baseAnimation.autoreverses = YES;
