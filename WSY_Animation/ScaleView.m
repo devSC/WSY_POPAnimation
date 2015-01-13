@@ -20,7 +20,7 @@
 //    [firstLayer setCornerRadius:10];
 //    [self.layer addSublayer:firstLayer];
 //    [self applyAinamationToLayer:firstLayer];
-    self.count = 12;
+    self.count = 4;
     NSInteger vertical = self.count;
     for (int j = 0; j <vertical ; j ++) {
         for (int i = 0; i < self.count; i++) {
