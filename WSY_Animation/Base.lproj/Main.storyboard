@@ -16,20 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="203" y="329" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-mn-VvK" customClass="ScaleView">
-                                <rect key="frame" x="150" y="14" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="CYT-3Q-FME"/>
-                                    <constraint firstAttribute="width" constant="300" id="FmK-ef-Jqy"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-4Z-wlC">
                                 <rect key="frame" x="244" y="484" width="112.5" height="30"/>
                                 <state key="normal" title="Like">
@@ -50,17 +36,23 @@
                                     <constraint firstAttribute="width" constant="300" id="Vhb-Tv-fxN"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53K-jr-Lel">
+                                <rect key="frame" x="157" y="63" width="287" height="61"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" red="0.25202742179999998" green="0.16379250249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="lvj-hU-O8q" secondAttribute="centerX" id="3IK-FA-ZQE"/>
-                            <constraint firstAttribute="centerX" secondItem="9W8-mn-VvK" secondAttribute="centerX" id="599-YY-T2M"/>
                             <constraint firstItem="pW7-jD-ad3" firstAttribute="top" secondItem="lvj-hU-O8q" secondAttribute="bottom" id="65g-Ai-EjL"/>
-                            <constraint firstAttribute="centerY" secondItem="9W8-mn-VvK" secondAttribute="centerY" constant="136" id="7bi-Sb-blp"/>
                             <constraint firstItem="TS4-4Z-wlC" firstAttribute="top" secondItem="pW7-jD-ad3" secondAttribute="bottom" constant="8" id="cHx-4U-eWd"/>
+                            <constraint firstItem="53K-jr-Lel" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="10" id="hf8-5Q-ExK"/>
                             <constraint firstItem="TS4-4Z-wlC" firstAttribute="centerX" secondItem="pW7-jD-ad3" secondAttribute="centerX" id="i0B-wd-cNI"/>
                             <constraint firstAttribute="centerX" secondItem="TS4-4Z-wlC" secondAttribute="centerX" constant="-0.25" id="mia-4T-XcJ"/>
+                            <constraint firstAttribute="centerX" secondItem="53K-jr-Lel" secondAttribute="centerX" id="pJx-fV-kmT"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="TS4-4Z-wlC" secondAttribute="bottom" constant="37" id="znF-Yq-nYK"/>
                         </constraints>
                         <connections>
@@ -71,6 +63,7 @@
                     <connections>
                         <outlet property="bottomConstraint" destination="65g-Ai-EjL" id="gjG-Cw-hyi"/>
                         <outlet property="likeImageView" destination="pW7-jD-ad3" id="JZB-m7-oB6"/>
+                        <outlet property="numberLabel" destination="53K-jr-Lel" id="9el-lp-NqE"/>
                         <outlet property="redView" destination="lvj-hU-O8q" id="q3F-py-pX0"/>
                     </connections>
                 </viewController>
