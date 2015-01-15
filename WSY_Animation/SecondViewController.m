@@ -7,8 +7,12 @@
 //
 
 #import "SecondViewController.h"
+#import "GradientView.h"
 
 @interface SecondViewController ()
+
+@property (weak, nonatomic) IBOutlet GradientView *gradientView;
+
 
 @end
 
@@ -17,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+        
+}
+- (IBAction)progress:(id)sender {
+    UISlider *slider =sender;
+    [self.gradientView setProgress:slider.value];
 }
 
 - (void)didReceiveMemoryWarning {

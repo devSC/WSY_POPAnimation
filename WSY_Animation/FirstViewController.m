@@ -13,6 +13,9 @@
 {
     BOOL _liked;
     CGFloat _endAngle;
+    CGFloat _arc;
+    CGFloat _endArc;
+    CAShapeLayer *_circleLayer;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *likeImageView;
 @property (weak, nonatomic) IBOutlet UIView *redView;
@@ -21,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) UIView *circleView;
+@property (weak, nonatomic) IBOutlet UIView *greenView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @end
 
@@ -36,7 +40,7 @@
     
     self.circleView = [[UIView alloc] init];
     [self.circleView setFrame:CGRectMake(0, 0, 50, 50)];
-    [self.circleView setCenter:CGPointMake(self.view.center.x, 200)];
+    [self.circleView setCenter:CGPointMake(self.view.center.x, 100)];
     
     [self.circleView.layer setCornerRadius:25];
     [self.circleView setBackgroundColor:[UIColor greenColor]];
@@ -44,6 +48,25 @@
     self.circleView.layer.transform = CATransform3DIdentity;
     
     [self.view addSubview:_circleView];
+    
+    _circleLayer = [CAShapeLayer layer];
+    [self.greenView.layer addSublayer:_circleLayer];
+    _arc = 1;
+    _endAngle = 0;
+    
+    UIBezierPath *bezerPath = [UIBezierPath bezierPath];
+    bezerPath.lineCapStyle = kCGLineCapRound;
+    bezerPath.lineJoinStyle = kCGLineJoinRound;
+    [bezerPath addArcWithCenter:CGPointMake(75, 75) radius:50 startAngle:0 endAngle:(M_PI * 2) clockwise:YES];
+    _circleLayer.path = bezerPath.CGPath;
+    _circleLayer.lineWidth = 5;
+    _circleLayer.strokeColor = [UIColor whiteColor].CGColor;
+    _circleLayer.fillColor = [UIColor clearColor].CGColor;
+    _circleLayer.lineCap = kCALineCapRound;
+    _circleLayer.lineJoin = kCALineJoinRound;
+    _circleLayer.strokeEnd = 0;
+
+    
     
 //    UIBezierPath *circlePath = [UIBezierPath bezierPath];
 ////    [circlePath moveToPoint:CGPointMake(self.circleView.center.x, 0)];
@@ -86,6 +109,13 @@
     
     [self applyRedViewAnimation];
     
+    [self applyNumberLabelAnimation];
+    
+        [self applyTableViewAnimation];
+        [self applyCircleViewLayer];
+    [self startCircle];
+
+    
     return;
 
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
@@ -118,9 +148,6 @@
     constantAnimation.springBounciness = 10;
     [_bottomConstraint pop_addAnimation:constantAnimation forKey:nil];
     
-    [self applyNumberLabelAnimation];
-    [self applyTableViewAnimation];
-    [self applyCircleViewLayer];
     return;
     
     POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
@@ -176,10 +203,9 @@
 }
 - (void)applyCircleViewLayer
 {
-//    _liked?[self scaleCircle] : [self blowUpScale];
-
-   
+    _liked?[self scaleCircle] : [self blowUpScale];
 }
+
 
 - (void)scaleCircle
 {
@@ -274,6 +300,19 @@
         }
     };
 
+}
+
+- (void)startCircle
+{
+    CGFloat toValue = arc4random()%5 * 0.25;
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
+    animation.springBounciness = 10;
+    animation.fromValue = @(_endArc);
+    animation.toValue = @(toValue);
+    
+    _endArc = toValue;
+
+    [_circleLayer pop_addAnimation:animation forKey:nil];
 }
 
 - (void)didReceiveMemoryWarning {

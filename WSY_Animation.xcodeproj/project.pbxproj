@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1BEE7C1A67FE5A003A64AC /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1BEE7B1A67FE5A003A64AC /* CircleView.m */; };
+		FE1BEE811A680C51003A64AC /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1BEE801A680C51003A64AC /* GradientView.m */; };
 		FED7D1DE1A64035E0068C61C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED7D1DD1A64035E0068C61C /* main.m */; };
 		FED7D1E11A64035E0068C61C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED7D1E01A64035E0068C61C /* AppDelegate.m */; };
 		FED7D1E41A64035E0068C61C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED7D1E31A64035E0068C61C /* FirstViewController.m */; };
@@ -33,6 +35,10 @@
 		CF0C1D2796FABC36D8215FEC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DA5DDD9466ECC416A226DCD1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6C4B42D9DC43A9D485F0EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1BEE7A1A67FE5A003A64AC /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		FE1BEE7B1A67FE5A003A64AC /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		FE1BEE7F1A680C51003A64AC /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		FE1BEE801A680C51003A64AC /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		FED7D1D81A64035E0068C61C /* WSY_Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSY_Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED7D1DC1A64035E0068C61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED7D1DD1A64035E0068C61C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +94,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FE1BEE7D1A67FE5E003A64AC /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				FED7D1E51A64035E0068C61C /* SecondViewController.h */,
+				FED7D1E61A64035E0068C61C /* SecondViewController.m */,
+				FE1BEE7A1A67FE5A003A64AC /* CircleView.h */,
+				FE1BEE7B1A67FE5A003A64AC /* CircleView.m */,
+				FE1BEE7F1A680C51003A64AC /* GradientView.h */,
+				FE1BEE801A680C51003A64AC /* GradientView.m */,
+			);
+			name = Second;
+			sourceTree = "<group>";
+		};
+		FE1BEE7E1A67FE6B003A64AC /* First */ = {
+			isa = PBXGroup;
+			children = (
+				FED7D1E21A64035E0068C61C /* FirstViewController.h */,
+				FED7D1E31A64035E0068C61C /* FirstViewController.m */,
+				FED7D2041A6407340068C61C /* ScaleView.h */,
+				FED7D2051A6407340068C61C /* ScaleView.m */,
+			);
+			name = First;
+			sourceTree = "<group>";
+		};
 		FED7D1CF1A64035E0068C61C = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +143,8 @@
 			children = (
 				FED7D1DF1A64035E0068C61C /* AppDelegate.h */,
 				FED7D1E01A64035E0068C61C /* AppDelegate.m */,
-				FED7D1E21A64035E0068C61C /* FirstViewController.h */,
-				FED7D1E31A64035E0068C61C /* FirstViewController.m */,
-				FED7D1E51A64035E0068C61C /* SecondViewController.h */,
-				FED7D1E61A64035E0068C61C /* SecondViewController.m */,
-				FED7D2041A6407340068C61C /* ScaleView.h */,
-				FED7D2051A6407340068C61C /* ScaleView.m */,
+				FE1BEE7E1A67FE6B003A64AC /* First */,
+				FE1BEE7D1A67FE5E003A64AC /* Second */,
 				FED7D1E81A64035E0068C61C /* Main.storyboard */,
 				FED7D1EB1A64035E0068C61C /* Images.xcassets */,
 				FED7D1ED1A64035E0068C61C /* LaunchScreen.xib */,
@@ -290,8 +316,10 @@
 			files = (
 				FED7D2061A6407340068C61C /* ScaleView.m in Sources */,
 				FED7D1E71A64035E0068C61C /* SecondViewController.m in Sources */,
+				FE1BEE7C1A67FE5A003A64AC /* CircleView.m in Sources */,
 				FED7D1E11A64035E0068C61C /* AppDelegate.m in Sources */,
 				FED7D1E41A64035E0068C61C /* FirstViewController.m in Sources */,
+				FE1BEE811A680C51003A64AC /* GradientView.m in Sources */,
 				FED7D1DE1A64035E0068C61C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
