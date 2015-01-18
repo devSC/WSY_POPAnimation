@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FE1BEE7C1A67FE5A003A64AC /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1BEE7B1A67FE5A003A64AC /* CircleView.m */; };
 		FE1BEE811A680C51003A64AC /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1BEE801A680C51003A64AC /* GradientView.m */; };
+		FEB7BE621A6A638000DEB57A /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB7BE611A6A638000DEB57A /* ThirdViewController.m */; };
+		FEB7BE661A6A66AF00DEB57A /* ArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB7BE651A6A66AF00DEB57A /* ArcView.m */; };
 		FED7D1DE1A64035E0068C61C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED7D1DD1A64035E0068C61C /* main.m */; };
 		FED7D1E11A64035E0068C61C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED7D1E01A64035E0068C61C /* AppDelegate.m */; };
 		FED7D1E41A64035E0068C61C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED7D1E31A64035E0068C61C /* FirstViewController.m */; };
@@ -39,6 +41,10 @@
 		FE1BEE7B1A67FE5A003A64AC /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		FE1BEE7F1A680C51003A64AC /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		FE1BEE801A680C51003A64AC /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		FEB7BE601A6A638000DEB57A /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		FEB7BE611A6A638000DEB57A /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		FEB7BE641A6A66AF00DEB57A /* ArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcView.h; sourceTree = "<group>"; };
+		FEB7BE651A6A66AF00DEB57A /* ArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcView.m; sourceTree = "<group>"; };
 		FED7D1D81A64035E0068C61C /* WSY_Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSY_Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED7D1DC1A64035E0068C61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED7D1DD1A64035E0068C61C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +124,17 @@
 			name = First;
 			sourceTree = "<group>";
 		};
+		FEB7BE631A6A668700DEB57A /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				FEB7BE601A6A638000DEB57A /* ThirdViewController.h */,
+				FEB7BE611A6A638000DEB57A /* ThirdViewController.m */,
+				FEB7BE641A6A66AF00DEB57A /* ArcView.h */,
+				FEB7BE651A6A66AF00DEB57A /* ArcView.m */,
+			);
+			name = Third;
+			sourceTree = "<group>";
+		};
 		FED7D1CF1A64035E0068C61C = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +160,7 @@
 			children = (
 				FED7D1DF1A64035E0068C61C /* AppDelegate.h */,
 				FED7D1E01A64035E0068C61C /* AppDelegate.m */,
+				FEB7BE631A6A668700DEB57A /* Third */,
 				FE1BEE7E1A67FE6B003A64AC /* First */,
 				FE1BEE7D1A67FE5E003A64AC /* Second */,
 				FED7D1E81A64035E0068C61C /* Main.storyboard */,
@@ -316,6 +334,8 @@
 			files = (
 				FED7D2061A6407340068C61C /* ScaleView.m in Sources */,
 				FED7D1E71A64035E0068C61C /* SecondViewController.m in Sources */,
+				FEB7BE661A6A66AF00DEB57A /* ArcView.m in Sources */,
+				FEB7BE621A6A638000DEB57A /* ThirdViewController.m in Sources */,
 				FE1BEE7C1A67FE5A003A64AC /* CircleView.m in Sources */,
 				FED7D1E11A64035E0068C61C /* AppDelegate.m in Sources */,
 				FED7D1E41A64035E0068C61C /* FirstViewController.m in Sources */,

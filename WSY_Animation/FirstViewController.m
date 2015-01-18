@@ -34,7 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.redView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.redView.layer.shadowOffset = CGSizeMake(0, 1);
+    self.redView.layer.shadowOffset = CGSizeMake(0, 5);
     self.redView.layer.shadowOpacity = 0.4;
     
     
